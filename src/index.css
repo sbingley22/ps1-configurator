@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes stretchDown {
+  0% {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  100% {
+    height: auto;
+    opacity: 1;
+    overflow: hidden;
+  }
+}
+
+.stretch-animation {
+  animation: stretchDown 0.125s ease-out forwards;
+}
