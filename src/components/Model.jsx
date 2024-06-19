@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber"
 import { Suspense } from "react"
 import Ps1 from "./Ps1"
 
-const Model = ({ intersectedObject, setIntersectedObject }) => {
+const Model = ({ intersectedObject, setIntersectedObject, preset, setPreset }) => {
   return (
     <Canvas 
       className="h-full 
@@ -17,12 +17,14 @@ const Model = ({ intersectedObject, setIntersectedObject }) => {
         <Environment preset="city" backgroundRotation={[0,Math.PI/2,0]} environmentRotation={[0,Math.PI/2,0]} />
         <OrbitControls 
           minDistance={.35}
-          maxDistance={.4}
+          maxDistance={.55}
         />
 
         <Ps1 
         intersectedObject={intersectedObject}
         setIntersectedObject={setIntersectedObject}
+        preset={preset}
+        setPreset={setPreset}
       />
 
       </Suspense>

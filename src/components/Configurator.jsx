@@ -5,14 +5,18 @@ import Settings from "./Settings"
 
 const Configurator = () => {
   const [intersectedObject, setIntersectedObject] = useState(null)
+  const [preset, setPreset] = useState(null)
   
   return (
     <div className="h-screen">
       <Model 
         intersectedObject={intersectedObject}
         setIntersectedObject={setIntersectedObject}
+        preset={preset}
+        setPreset={setPreset}
       />
-      <Hud    
+      <Hud
+        setPreset={setPreset}
       />
       <Settings
         intersectedObject={intersectedObject}
